@@ -33,6 +33,7 @@ plugins:
   - serverless-plugin-scripts
   - serverless-offline
   - serverless-s3-deploy
+  - serverless-domain-manager
 
 functions:
   serve:
@@ -99,6 +100,12 @@ custom:
               - "**/*.js"
               - "**/*.css"
               - "**/*.map"
+
+  customDomain:
+    domainName: braingame.xyz
+    basePath: ""
+    stage: ${self:provider.stage}
+    createRoute53Record: true
 
 resources:
   Resources:
