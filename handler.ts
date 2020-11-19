@@ -11,3 +11,10 @@ export const serve = async (event: APIGatewayEvent, context: Context): Promise<A
     body: await render(),
   };
 };
+
+export const word = async (event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResultV2> => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ word: "elephant" }),
+  };
+};

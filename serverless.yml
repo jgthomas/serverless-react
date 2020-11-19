@@ -47,6 +47,13 @@ functions:
           path: /{any+}
           method: any
           cors: true
+  word:
+    handler: handler.word
+    events:
+      - http:
+          path: word
+          method: get
+          cors: true
 
 custom:
   distBucketUrl:
